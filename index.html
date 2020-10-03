@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <button class="open-button" onclick="openForm()">Question</button>
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <h1>Have a question?</h1>
+            <textarea placeholder="Type question.." name="msg" required></textarea>
+            <button type="submit" class="btn">Ask</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
