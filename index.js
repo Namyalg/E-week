@@ -19,21 +19,12 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
-var ques_no = 0;
 function addques() {
-    /*var details = {
-        Interviewer_name: $('#P1name').val(),
-        Interviewee_name: $('#P2name').val(),
-        Interviewee_email: $("#P2email").val(),
-        Interviewer_email: $("#P1email").val(),
-        Date_: $("#date-time").val(),
-        Key: rand,
-    };*/
-    ques_no += 1;
+    var d = new Date();
+    var n = d.getTime();
     var question = document.getElementById("msg").value;
     document.getElementById("msg").value = "";
-    firebaseOrdersCollection.child(ques_no).set(question);
-    //firebaseOrdersCollection.set(question);
+    firebaseOrdersCollection.child(n).set(question);
 
 };
 
