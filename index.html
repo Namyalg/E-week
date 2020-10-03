@@ -3,17 +3,23 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css"> 
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 </head>
 <body>
+    <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
     <button class="open-button" onclick="openForm()">Question</button>
     <div class="chat-popup" id="myForm">
         <form class="form-container">
             <h1>Have a question?</h1>
-            <textarea placeholder="Type question.." name="msg" required></textarea>
-            <button type="submit" class="btn">Ask</button>
+            <textarea placeholder="Type question.." id="msg" required></textarea>
+            <button type="button" class="btn" onclick="addques()">Ask</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
     </div>
-    <script src="index.js"></script>
 </body>
 </html>
