@@ -17,7 +17,7 @@ ref = db.reference('Questions')
 
 filename = "questions.csv"
     
-    # writing to csv file  
+# writing to csv file  
 with open(filename, 'w') as csvfile:
     # creating a csv writer object  
     csvwriter = csv.writer(csvfile)  
@@ -27,11 +27,11 @@ with open(filename, 'w') as csvfile:
 
 for i,j in ref.get().items():
     try:
-        rows = [i, j]
+        rows = [[int(i), j]]
         with open(filename, "a") as csvfile:
             csvwriter = csv.writer(csvfile)  
             csvwriter.writerows(rows) 
     except:
         pass
     
-    print(i, j)
+    #print(i, j)
